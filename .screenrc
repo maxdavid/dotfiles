@@ -5,8 +5,9 @@ nonblock on               # If a screen dies, don't freeze the whole screen wait
 defscrollback 10000
 vbell off
 vbell_msg "!! %t (%n)"
+bell_msg "!! %t (%n)"
 
-# Open some tabs with these names, change to your liking
+# Open some windows with these names, change to your liking
 # screen -t music ncmpcpp # opens a tab called music and starts ncmpcpp
 screen -t irc
 screen -t bash
@@ -14,7 +15,11 @@ screen -t bash
 # tab bar
 hardstatus alwayslastline "%{= KW}%-w%{= kw}%n %t%{-}%+w %-= %c"
 
-# f1-f9 selects and moves to screens 0-8
+# change windows with ctrl+left and ctrl+right (irssi style)
+bindkey "^[0d" prev
+bindkey "^[0c" next
+
+# f1-f9 selects and moves to windows 0-8
 bindkey -k k1 select 0
 bindkey -k k2 select 1
 bindkey -k k3 select 2
@@ -25,7 +30,7 @@ bindkey -k k7 select 6
 bindkey -k k8 select 7
 bindkey -k k9 select 8
 
-bindkey q quit
+bind q quit
 
 # 'C-a A' to change the name of a tab
 # 'C-a :number [#]' to move a screen to position N 
