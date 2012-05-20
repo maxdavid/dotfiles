@@ -13,7 +13,7 @@ main = xmonad $ defaultConfig
 	]
 	, terminal = "urxvt"
 	, normalBorderColor = "#cccccc"
-	, focusedBorderColor = "#cc9900" } `additionalKeysP`
+	, focusedBorderColor = "#664400" } `additionalKeysP`
 	[ ("M-g", withFocused toggleBorder)
 	,("M-a", spawn "xterm")            -- open an xterm for programs without 256 support
 	,("M-p", spawn "exe=`dmenu_path | dmenu_run` && eval \"exec $exe\"")  -- easy program spawning
