@@ -4,7 +4,7 @@
 URxvt.perl-ext-common:  default,matcher,vtwheel
 
 ! ! transparency and colors ----------------------
-! ! these colors are far better on the eyes than urxvt's defaults
+! ! these colors are far better on the eyes than urxvts defaults
 URxvt.depth: 32
 URxvt.background: [98]#050505
 URxvt.foreground: #F2F2F2
@@ -45,7 +45,7 @@ URxvt.underlineURLs:    true
 URxvt.urlButton:        2
 
 ! ! copy/paste -----------------------------------
-! ! don't use this very often, but nice to know I can.
+! ! dont use this very often, but nice to know I can.
 URxvt.keysym.M-u:   perl:url-select:select_next
 URxvt.keysym.M-c:   perl:clipboard:copy
 URxvt.keysym.M-v:   perl:clipboard:paste

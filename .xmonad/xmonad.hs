@@ -15,12 +15,12 @@ main = xmonad $ defaultConfig
 	, normalBorderColor = "#cccccc"
 	, focusedBorderColor = "#664400" } `additionalKeysP`
 	[ ("M-g", withFocused toggleBorder)
-	,("M-a", spawn "xterm")            -- open an xterm for programs without 256 support
+	,("M-a", spawn "xterm")
 	,("M-p", spawn "exe=`dmenu_path | dmenu_run` && eval \"exec $exe\"")  -- easy program spawning
-	,("M-w", spawn "google-chrome")
+	,("M-w", spawn "chromium")
 	,("M-m", spawn "vlc")
 	,("M-d", spawn "libreoffice")
---    ,("<XF86AudioPause>", spawn "xmessage 'audio pause'")
+	,("<XF86AudioPause>", spawn "xmessage 'audio pause'")
 	,("<XF86AudioLowerVolume>", spawn "amixer sset -q Master 2-")
 	,("<XF86AudioRaiseVolume>", spawn "amixer sset -q Master 2+")
 	,("<XF86AudioMute>", spawn "/home/max/.bin/togglemute.sh")   -- a script to fix my desktop's mute problem

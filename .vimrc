@@ -14,7 +14,7 @@ set title
 set scrolloff=3
 set showcmd                     " display incomplete commands
 filetype plugin indent on       " load file type plugins + indentation
-call pathogen#infect()          " tpope's pathogen for vim addons
+"" call pathogen#infect()          " tpope's pathogen for vim addons
 
 "" Wrapping  ------------------------------
 set wrap
