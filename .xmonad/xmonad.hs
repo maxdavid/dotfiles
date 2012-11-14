@@ -1,7 +1,9 @@
 import XMonad
 import XMonad.Hooks.ManageDocks     (manageDocks, avoidStruts)
 import XMonad.Actions.NoBorders
+import XMonad.Hooks.EwmhDesktops
 import XMonad.Util.EZConfig
+import XMonad.Hooks.ManageHelpers
 
 main = xmonad $ defaultConfig
 	{ layoutHook = avoidStruts $ layoutHook defaultConfig
@@ -10,21 +12,19 @@ main = xmonad $ defaultConfig
 		manageDocks
 		, className =? "gcalctool" --> doFloat
 		, manageHook defaultConfig
+		, isFullscreen --> doFullFloat
 	]
 	, terminal = "urxvt"
 	, normalBorderColor = "#cccccc"
 	, focusedBorderColor = "#664400" } `additionalKeysP`
 	[ ("M-g", withFocused toggleBorder)
-	,("M-a", spawn "xterm")
-	,("M-p", spawn "exe=`dmenu_path | dmenu_run` && eval \"exec $exe\"")  -- easy program spawning
+	,("M-p", spawn "exe=`dmenu_path | dmenu_run` && eval \"exec $exe\"")
 	,("M-w", spawn "chromium")
-	,("M-m", spawn "vlc")
-	,("M-d", spawn "libreoffice")
-	,("<XF86AudioPause>", spawn "xmessage 'audio pause'")
-	,("<XF86AudioLowerVolume>", spawn "amixer sset -q Master 2-")
-	,("<XF86AudioRaiseVolume>", spawn "amixer sset -q Master 2+")
-	,("<XF86AudioMute>", spawn "/home/max/.bin/togglemute.sh")   -- a script to fix my desktop's mute problem
+	,("M-v", spawn "vlc")
+	,("<XF86AudioPlay>", spawn "mpc toggle")
+	,("<XF86AudioLowerVolume>", spawn "amixer -q -c 0 -- sset Master 2-")
+	,("<XF86AudioRaiseVolume>", spawn "amixer -q -c 0 -- sset Master 2+")
+	,("<XF86AudioMute>", spawn "amixer sset Master toggle")
 	,("<XF86Calculator>", spawn "gcalctool")
 	,("<Print>", spawn "scrot")
 	]
-

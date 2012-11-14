@@ -1,7 +1,7 @@
 ! ! urxft settings -------------------------------------------------------------
 ! ! go to https://wiki.archlinux.org/index.php/Rxvt-unicode for more info
 
-URxvt.perl-ext-common:  default,matcher,vtwheel
+URxvt.perl-ext-common:  default,matcher
 
 ! ! transparency and colors ----------------------
 ! ! these colors are far better on the eyes than urxvts defaults
@@ -36,11 +36,11 @@ URxvt.color15 : #EEEEEEEEECEC
 
 
 URxvt.scrollBar: false
-URxvt.font: xft:DejaVuSansMono:size=9:antialias=false
+URxvt.font: xft:DejaVuSansMono:size=11:antialias=false
 
 ! ! url hacks ------------------------------------
 ! ! mostly allows for the clicking of links in irssi
-URxvt.urlLauncher:      /usr/bin/google-chrome
+URxvt.urlLauncher:      /usr/bin/chromium
 URxvt.underlineURLs:    true
 URxvt.urlButton:        2
 

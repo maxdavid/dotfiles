@@ -9,7 +9,7 @@
 #
 # note: the color tags make the slashes a light blue and the hyphens a dark grey.
 
- vol=$(amixer get Master | awk -F'[]%[]' '/%/ {if ($7 == "off") { print "Muted" } else { print $2 }}')
+ vol=$(amixer -c 0 get Master | awk -F'[]%[]' '/%/ {if ($7 == "off") { print "Muted" } else { print $2 }}')
  bars=`expr $vol / 10`
 
  case $bars in
@@ -24,7 +24,7 @@
 	8)  bar=' <fc=#CCEBED>////////</fc><fc=#444545>--</fc> ' ;;
 	9)  bar=' <fc=#CCEBED>/////////</fc><fc=#444545>-</fc> ' ;;
 	10) bar=' <fc=#CCEBED>//////////</fc><fc=#444545></fc> ' ;;
-	*)  bar='<fc=#444545>----<fc=#FF8980>!!</fc>----</fc>' ;;
+	*)  bar=' <fc=#444545>----<fc=#FF8980>!!</fc>----</fc> ' ;;
 esac
 
 echo $vol $bar
