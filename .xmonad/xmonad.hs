@@ -8,6 +8,7 @@ import XMonad.Hooks.ManageHelpers
 main = xmonad $ defaultConfig
 	{ layoutHook = avoidStruts $ layoutHook defaultConfig
 	, borderWidth = 1
+	, handleEventHook = fullscreenEventHook
 	, manageHook = composeAll [ 
 		manageDocks
 		, className =? "gcalctool" --> doFloat

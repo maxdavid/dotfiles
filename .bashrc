@@ -25,5 +25,5 @@ fi
 
 PS1='[\u@\h \W]\$ '
 
-PATH=$PATH:/home/roy/.gem/ruby/1.8/bin
+PATH=$PATH:/home/max/.gem/ruby/1.9.1/bin
 export PATH
