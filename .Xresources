@@ -40,7 +40,7 @@ URxvt.font: xft:DejaVuSansMono:size=11:antialias=false
 
 ! ! url hacks ------------------------------------
 ! ! mostly allows for the clicking of links in irssi
-URxvt.urlLauncher:      /usr/bin/chromium
+URxvt.urlLauncher:      /usr/bin/google-chrome
 URxvt.underlineURLs:    true
 URxvt.urlButton:        2
 

@@ -20,7 +20,7 @@ main = xmonad $ defaultConfig
 	, focusedBorderColor = "#664400" } `additionalKeysP`
 	[ ("M-g", withFocused toggleBorder)
 	,("M-p", spawn "exe=`dmenu_path | dmenu_run` && eval \"exec $exe\"")
-	,("M-w", spawn "chromium")
+	,("M-w", spawn "google-chrome")
 	,("M-v", spawn "vlc")
 	,("<XF86AudioPlay>", spawn "mpc toggle")
 	,("<XF86AudioLowerVolume>", spawn "amixer -q -c 0 -- sset Master 2-")

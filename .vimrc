@@ -28,7 +28,9 @@ nmap <silent> <Down> gj
 nmap <silent> <Up> gk
 
 "" Whitespace  ----------------------------
-set tabstop=3 shiftwidth=3      " tab is three spaces
+set tabstop=3
+set shiftwidth=3                " tab is three spaces
+set expandtab                   " tabs are now spaces!
 set backspace=indent,eol,start  " backspace through everything in insert mode
 
 "" Searching  -----------------------------
