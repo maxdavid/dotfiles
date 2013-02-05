@@ -5,7 +5,7 @@
 amixer sset -q Master toggleMute
 
 # 1 == unmuted, 0 == muted
-mutebool=$(amixer get Master | awk -F'[]%[]' '/%/ {if ($7 == "on") { print 1 } else { print 0 }}')
+mutebool=$(amixer get Master | awk --field-separator='[]%[]' '/%/ {if ($7 == "on") { print 1 } else { print 0 }}')
 
 if [ $mutebool ]; then
 	amixer sset -q Headphone unmute &

@@ -9,7 +9,7 @@
 #
 # note: the color tags make the slashes a light blue and the hyphens a dark grey.
 
- vol=$(amixer -c 0 get Master | awk -F'[]%[]' '/%/ {if ($7 == "off") { print "Muted" } else { print $2 }}')
+ vol=$(amixer -c 0 get Master | awk --field-separator='[]%[]' '/%/ {if ($7 == "off") { print "Muted" } else { print $2 }}')
  bars=`expr $vol / 10`
 
  case $bars in

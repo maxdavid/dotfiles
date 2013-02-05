@@ -9,13 +9,13 @@
 #
 # note: the color tags make the slashes a light blue and the hyphens a dark grey.
 
-iwconfig wlan0 2>&1 | grep -q no\ wireless\ extensions\. && {
+iwconfig wlan0 2>&1 | grep --quiet no\ wireless\ extensions\. && {
   echo wired
     exit 0
  }
 
- essid=`iwconfig wlan0 | awk -F '"' '/ESSID/ {print $2}'`
- stngth=`iwconfig wlan0 | awk -F '=' '/Quality/ {print $2}' | cut -d '/' -f 1`
+ essid=`iwconfig wlan0 | awk --field-separator='"' '/ESSID/ {print $2}'`
+ stngth=`iwconfig wlan0 | awk --field-separator='=' '/Quality/ {print $2}' | cut --delimiter='/' -fields=1`
  bars=`expr $stngth / 10`
 
  case $bars in

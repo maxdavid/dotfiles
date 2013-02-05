@@ -49,6 +49,9 @@ fi
 xset -dpms &
 xset s off &
 
+# Start xscreensaver
+/usr/bin/xscreensaver -no-splash &
+
 # Make java work
 wmname LG3D &
 
