@@ -13,8 +13,11 @@ set wildmode=list:longest,full
 set title
 set scrolloff=3
 set showcmd                     " display incomplete commands
+
+"" Plugin settings  -----------------------
+call pathogen#infect()          " tpope's pathogen for vim addons (https://github.com/tpope/vim-pathogen)
+call pathogen#helptags()
 filetype plugin indent on       " load file type plugins + indentation
-"" call pathogen#infect()          " tpope's pathogen for vim addons
 
 "" Wrapping  ------------------------------
 set wrap
@@ -28,8 +31,8 @@ nmap <silent> <Down> gj
 nmap <silent> <Up> gk
 
 "" Whitespace  ----------------------------
-set tabstop=3
-set shiftwidth=3                " tab is three spaces
+set tabstop=2
+set shiftwidth=2                " tab is two spaces
 set expandtab                   " tabs are now spaces!
 set backspace=indent,eol,start  " backspace through everything in insert mode
 
@@ -44,4 +47,5 @@ color desertmod                 " my modified desert scheme (~/.vim/colors/deser
 set number                      " line numbers are nice
 set cursorline                  " so is highlighting the current line
 set showmode                    " show the current mode
+
 
