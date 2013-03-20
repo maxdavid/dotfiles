@@ -25,5 +25,6 @@ fi
 
 PS1='[\u@\h \W]\$ '
 
-PATH=$PATH:/home/max/.gem/ruby/1.9.1/bin
 export PATH
+
+[[ -s "/home/max/.rvm/scripts/rvm" ]] && source "/home/max/.rvm/scripts/rvm"

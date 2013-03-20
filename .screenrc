@@ -38,3 +38,5 @@ bind q quit
 # 'C-a c' to create new tabs
 # 'C-a k' or 'C-d' to delete tabs
 
+# for RVM
+shell -/bin/bash
