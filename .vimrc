@@ -15,6 +15,7 @@ set scrolloff=3
 set showcmd                     " display incomplete commands
 
 "" Plugin settings  -----------------------
+runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()          " tpope's pathogen for vim addons (https://github.com/tpope/vim-pathogen)
 call pathogen#helptags()
 filetype plugin indent on       " load file type plugins + indentation

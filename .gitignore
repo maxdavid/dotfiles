@@ -1,5 +1,5 @@
 # I'm just going to ignore everything in ~ to make this easier on myself, the files I've already added to the repo will still be tracked.
-# if I add more files, I'll have to tell git to add them.
+# if I add more files, I'll have to tell git to add them with '--force'.
 # I'll probably forget about this and it'll kill me later.
 
 *
