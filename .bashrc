@@ -23,7 +23,23 @@ if [ -f /etc/dircolors ]; then
 	alias egrep='egrep --color=auto'
 fi
 
-PS1='[\u@\h \W]\$ '
+# Comment this out to disable color prompt
+force_color_prompt=yes
+
+if [ -n "$force_color_prompt" ]; then
+  if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
+    color_prompt=yes
+  else
+    color_prompt=
+  fi
+fi
+
+if [ "$color_prompt" = yes ]; then
+  PS1='[\[\033[0;32m\]\u\[\033[0;37m\]@\[\033[0;32m\]\h\[\033[00m\] \[\033[01;34m\]\W\[\033[00m\]]\$ '
+else
+  PS1='[\u@\h \W]\$ '
+fi
+unset color_prompt force_color_prompt
 
 export PATH
 
