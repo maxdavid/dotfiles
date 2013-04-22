@@ -3,9 +3,8 @@ alias ..='cd ..'
 alias ...='cd ../..'
 
 alias ada='ssh tc_max@ada.evergreen.edu'
-alias slacr='ssh -t tc_max@ada.evergreen.edu ssh pipecork@slacr'
+alias slacr='ssh -t tc_max@ada.evergreen.edu slacr'
 alias davmax04='ssh davmax04@ada.evergreen.edu'
-alias watdo='ssh pipecork@wat.do'
 
 alias gs='git status'
 
