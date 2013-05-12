@@ -7,6 +7,7 @@ alias slacr='ssh -t tc_max@ada.evergreen.edu ssh pipecork@10.14.3.106'
 alias davmax04='ssh davmax04@ada.evergreen.edu'
 
 alias gs='git status'
+alias gp='git pull'
 
 alias spy='lsof -i -P +c 0 +M | grep -i "$1"'
 alias sax='/usr/local/sbin/epic_cuckoo.sh'
