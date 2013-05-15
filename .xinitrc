@@ -35,7 +35,7 @@ if [ -f ~/.fehbg ];
 then
   eval $(cat ~/.fehbg) &
 else
-  feh --bg-fill ~/.wallpaper/zerocool.jpg &
+  feh --bg-fill ~/.wallpaper/meow.jpg &
 fi
 
 # Disable screensaver / standby
