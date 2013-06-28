@@ -15,22 +15,19 @@ ip -4 addr show eth0 2>&1 | grep --quiet "inet " && {
  }
 
 essid=`iwconfig wlan0 | awk --field-separator='"' '/ESSID/ {print $2}'`
-strength=`iwconfig wlan0 | awk --field-separator='=' '/Quality/ {print $2}' | cut --delimiter='/' -fields=1`
+strength=`iwconfig wlan0 | awk --field-separator='=' '/Quality/ {print $2}' | cut --delimiter='/' --fields=1`
 bars=`expr $strength / 10`
 
 case $bars in
-	0)  bar=' <fc=#CCEBED></fc><fc=#444545>----------</fc> ' ;;
-	1)  bar=' <fc=#CCEBED>/</fc><fc=#444545>---------</fc> ' ;;
-	2)  bar=' <fc=#CCEBED>//</fc><fc=#444545>--------</fc> ' ;;
-	3)  bar=' <fc=#CCEBED>///</fc><fc=#444545>-------</fc> ' ;;
-	4)  bar=' <fc=#CCEBED>////</fc><fc=#444545>------</fc> ' ;;
-	5)  bar=' <fc=#CCEBED>/////</fc><fc=#444545>-----</fc> ' ;;
-	6)  bar=' <fc=#CCEBED>//////</fc><fc=#444545>----</fc> ' ;;
-	7)  bar=' <fc=#CCEBED>///////</fc><fc=#444545>---</fc> ' ;;
-	8)  bar=' <fc=#CCEBED>////////</fc><fc=#444545>--</fc> ' ;;
-	9)  bar=' <fc=#CCEBED>/////////</fc><fc=#444545>-</fc> ' ;;
-	10) bar=' <fc=#CCEBED>//////////</fc><fc=#444545></fc> ' ;;
-	*)  bar='<fc=#444545>----<fc=#FF8980>!!</fc>----</fc>' ;;
+	0)  bar=' <fc=#CCEBED></fc><fc=#444545>-------</fc> ' ;;
+	1)  bar=' <fc=#CCEBED>/</fc><fc=#444545>------</fc> ' ;;
+	2)  bar=' <fc=#CCEBED>//</fc><fc=#444545>-----</fc> ' ;;
+	3)  bar=' <fc=#CCEBED>///</fc><fc=#444545>----</fc> ' ;;
+	4)  bar=' <fc=#CCEBED>////</fc><fc=#444545>---</fc> ' ;;
+	5)  bar=' <fc=#CCEBED>/////</fc><fc=#444545>--</fc> ' ;;
+	6)  bar=' <fc=#CCEBED>//////</fc><fc=#444545>-</fc> ' ;;
+	7)  bar=' <fc=#CCEBED>///////</fc><fc=#444545></fc> ' ;;
+	*)  bar='<fc=#444545>-<fc=#FF8980>!!</fc>-</fc>' ;;
 esac
 
 echo $essid $bar
