@@ -7,12 +7,12 @@ red=#FF8980
 lowthreshold=15
 
 # This line sets batpercent as the remaining battery life as a percentage
-batpercent=$(acpi -b | awk '{print $4}')
+batpercent=$(acpi -b | awk '{print substr($4,1,length($4)-1)}')
 # Set batnumber as the percentage number, without the % sign
 batnumber=$(echo $batpercent | awk 'sub(".$", "")')
 
 # This line sets batstate as the battery state (Charging/Discharging/AC)
-batstate=$(acpi -b | awk '{print $3}' | awk 'sub(".$", "")')
+batstate=$(acpi -b | awk '{print substr($3,1,length($3)-1)}')
 
 # if: the battery is charging AND it's not 100%, then: set percentage to green color
 # elif: the battery is less than 15%, then: set percentage to red color
