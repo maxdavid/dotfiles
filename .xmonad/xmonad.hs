@@ -27,6 +27,6 @@ main = xmonad $ defaultConfig
   ,("<XF86MonBrightnessUp>", spawn "xbacklight -inc 10")
   ,("<XF86MonBrightnessDown>", spawn "xbacklight -dec 10")
   ,("<XF86AudioMute>", spawn "amixer sset Master toggle")
-  ,("<XF86Launch1>", spawn "gnome-calculator")
+  ,("<XF86ScreenSaver>", spawn "gnome-calculator")
   ,("<Print>", spawn "scrot")
   ]
