@@ -17,7 +17,7 @@ batstate=$(acpi -b | awk '{print $3}' | sed 's/,$//g')
 # if: the battery is charging AND it's not 100%, then: set percentage to green color
 # elif: the battery is less than 15%, then: set percentage to red color
 # else: just print the damn percentage
-if [ "$batstate" = "Unknown" ] && [ "$batnumber" != "100" ]; then
+if [ "$batstate" = "Charging" ] && [ "$batnumber" != "100" ]; then
 	echo "<fc=$green>"$batpercent"</fc>"
 elif [ "$batnumber" -le "$lowthreshold" ] && [ "$batnumber" != "100" ]; then
 	echo "<fc=$red>"$batpercent"</fc>"
