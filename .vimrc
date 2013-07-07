@@ -6,6 +6,9 @@ set tabpagemax=15               " show no more than 15 tabs
 set t_Co=256                    " allow for 256 colors
 syntax enable
 
+"" Keybindings  ---------------------------
+inoremap jk <Esc>
+
 "" Additional misc settings  --------------
 set encoding=utf-8
 set wildmenu                    " really good file completion
@@ -48,5 +51,4 @@ color desertmod                 " my modified desert scheme (~/.vim/colors/deser
 set number                      " line numbers are nice
 set cursorline                  " so is highlighting the current line
 set showmode                    " show the current mode
-
 
