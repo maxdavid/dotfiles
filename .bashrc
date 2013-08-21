@@ -41,6 +41,6 @@ else
 fi
 unset color_prompt force_color_prompt
 
-export PATH
+export PATH=$PATH:/home/max/.gem/ruby/2.0.0/bin
 
 [[ -s "/home/max/.rvm/scripts/rvm" ]] && source "/home/max/.rvm/scripts/rvm"
