@@ -9,6 +9,10 @@ if [ -f ~/.bash_aliases ]; then
 	. ~/.bash_aliases
 fi
 
+if [ -f ~/.plc_aliases ]; then
+	. ~/.plc_aliases
+fi
+
 if [ -f /etc/dircolors ]; then
 	eval $(dircolors -b /etc/dircolors)
 	
@@ -41,6 +45,7 @@ else
 fi
 unset color_prompt force_color_prompt
 
+export TERM=xterm
 export PATH=$PATH:/home/max/.gem/ruby/2.0.0/bin
 
 [[ -s "/home/max/.rvm/scripts/rvm" ]] && source "/home/max/.rvm/scripts/rvm"
