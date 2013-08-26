@@ -20,3 +20,7 @@ alias spy='lsof -i -P +c 0 +M | grep -i "$1"'
 alias sax='/usr/local/sbin/epic_cuckoo.sh'
 alias please="sudo"
 
+alias dubstep='echo "main(i){for(i=0;;i++)putchar(((i*(i>>8|i>>9)&46&i>>8))^(i&i>>13|i>>6));}" | gcc -x c - && ./a.out | aplay'
+alias house='echo "main(i){for(i=0;;i++)putchar(((i*(i>>17|i>>9)&46&i>>3))^(i&i>>10|i>>100));}" | gcc -x c - && ./a.out | aplay'
+alias remix='echo "main(i){for(i=0;;i++)putchar(((i*(i>>3|i>>11)&43&i>>8))^(i&i>>12|i>>4));}" | gcc -x c - && ./a.out | aplay'
+alias remix2='echo "main(i){for(i=0;;i++)putchar(((i^(i>>64|i>>11)&70&i>>8))*(i&i>>12|i>>4));}" | gcc -x c - && ./a.out | aplay'
