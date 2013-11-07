@@ -45,6 +45,7 @@ set hlsearch                    " highlighting matches
 set incsearch                   " incremental searching
 set ignorecase                  " searches are case insensitive...
 set smartcase                   " ... unless they contain at least one capital letter
+nnoremap <CR> :noh<CR><CR>      " unsets the last search pattern by pressing return
 
 "" Color/Visual  --------------------------
 color desertmod                 " my modified desert scheme (~/.vim/colors/desertmod.vim)
