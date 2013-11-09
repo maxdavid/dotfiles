@@ -16,7 +16,8 @@ alias tunnelkace='sudo ssh -f tc_max@ada.evergreen.edu -L 80:kaceapp.evergreen.e
 alias gs='git status'
 alias gp='git pull'
 
-alias spy='lsof -i -P +c 0 +M | grep -i "$1"'
+alias multihead='xrandr --output LVDS1 --off --output HDMI1 --auto --output VGA1 --auto --left-of HDMI1; killall trayer; trayer --edge top --alpha 0 --align right --SetDockType true --SetPartialStrut true --expand true --width 5 --transparent true --tint 0x000000 --height 12 & disown'
+
 alias sax='/usr/local/sbin/epic_cuckoo.sh'
 alias please="sudo"
 
