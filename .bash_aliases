@@ -6,6 +6,8 @@ alias ada='ssh tc_max@ada.evergreen.edu'
 alias slacr='ssh -t tc_max@ada.evergreen.edu ssh pipecork@10.14.3.106'
 alias davmax04='ssh davmax04@ada.evergreen.edu'
 alias tunny='ssh max@192.241.195.88'
+alias tahoe='ssh maxdavid@tahoe.cs.dartmouth.edu'
+alias conch='ssh max@129.170.213.70'
 alias aristotle='ssh canopus@aristotle.dartmouth.edu'
 alias aurora='ssh -t canopus@aristotle.dartmouth.edu ssh aurora@157.132.41.82'
 
