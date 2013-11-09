@@ -39,4 +39,4 @@ bind q quit
 # 'C-a k' or 'C-d' to delete tabs
 
 # for RVM
-shell -/bin/bash
+#shell -/bin/bash
