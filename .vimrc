@@ -22,6 +22,7 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()          " tpope's pathogen for vim addons (https://github.com/tpope/vim-pathogen)
 call pathogen#helptags()
 filetype plugin indent on       " load file type plugins + indentation
+let g:vim_markdown_folding_disabled=1  " disable auto folding in plasticboy's md syntax plugin
 
 "" Wrapping  ------------------------------
 set wrap
