@@ -18,7 +18,7 @@ xcompmgr &
 
 # nm-applet &
 dropboxd &
-gtk-redshift &
+redshift-gtk &
 mpd ~/.mpd.conf &
 
 #
