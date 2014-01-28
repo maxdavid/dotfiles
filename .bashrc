@@ -45,6 +45,8 @@ else
 fi
 unset color_prompt force_color_prompt
 
+export EDITOR=vim
+export BROWSER=firefox
 export TERM=xterm
 export PATH=$PATH:/home/max/.gem/ruby/2.0.0/bin
 
