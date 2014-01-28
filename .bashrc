@@ -41,6 +41,13 @@ else
 fi
 unset color_prompt force_color_prompt
 
+<<<<<<< HEAD
 export PATH
+=======
+export EDITOR=vim
+export BROWSER=firefox
+export TERM=xterm
+export PATH=$PATH:/home/max/.gem/ruby/2.0.0/bin
+>>>>>>> 90b46e8... Set envvars for vim and firefox
 
 [[ -s "/home/max/.rvm/scripts/rvm" ]] && source "/home/max/.rvm/scripts/rvm"
