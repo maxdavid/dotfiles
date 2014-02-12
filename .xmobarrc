@@ -11,8 +11,9 @@ Config { font = "-misc-fixed-*-*-*-*-10-*-*-*-*-*-*-*"
     , Run Com "/home/max/.bin/wireless.sh" [] "wifi" 30
 		, Run Com "/home/max/.bin/audio.sh" [] "volume" 1
     , Run Com "/home/max/.bin/battery.sh" [] "battery" 30
+    , Run Com "/usr/bin/cat" ["/tmp/song.txt"] "servsong" 3
 	]
 	, sepChar = "%"
 	, alignSep = "}{"
-	, template = "%multicpu% | %memory% | %wifi% }{ %volume% | %battery% | %eth0% | <fc=#EDB64E>%date%</fc>"
+	, template = "%multicpu% | %memory% | %wifi% }{ %servsong% | %volume% | %battery% | <fc=#EDB64E>%date%</fc>"
 }
