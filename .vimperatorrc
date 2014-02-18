@@ -1,0 +1,23 @@
+"3.8.1 (created: 2013/11/21 23:49:14)
+" vim: set ft=vimperator:
+
+" 'ctrl+a' selects all text instead of jumping to start of line
+inoremap <C-a> <Insert><C-a><Insert>
+
+" '/' uses firefox's native find function (vimperator's is broke)
+map / <Insert><C-f><Insert>
+
+" use 'ctrl+F8' to hide status bar
+map <silent> <C-F8> :js toggle_bottombar()<CR>
+
+:js << EOF
+function toggle_bottombar() {
+    var bb = document.getElementById('liberator-bottombar');
+    if (!bb)
+        return;
+    bb.style.height = (bb.style.height == '') ? '0px' : '';
+    bb.style.overflow = (bb.style.height == '') ? '' : 'hidden';
+    }
+EOF
+
+source! /home/max/.vimperatorrc.local
