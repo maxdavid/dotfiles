@@ -4,7 +4,9 @@ alias ...='cd ../..'
 
 alias ada='ssh davmax04@ada.evergreen.edu'
 alias slacr='ssh -t davmax04@ada.evergreen.edu ssh pipecork@10.14.3.106'
+
 alias tunny='ssh max@192.241.195.88'
+alias gibson='ssh max@192.241.235.71'
 
 alias gs='git status'
 alias gp='git pull'
