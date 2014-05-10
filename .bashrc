@@ -47,7 +47,9 @@ unset color_prompt force_color_prompt
 
 export EDITOR=vim
 export BROWSER=firefox
-export TERM=xterm
+#export TERM=xterm
 export PATH=$PATH:/home/max/.gem/ruby/2.0.0/bin
 
 [[ -s "/home/max/.rvm/scripts/rvm" ]] && source "/home/max/.rvm/scripts/rvm"
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
