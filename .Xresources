@@ -40,9 +40,10 @@ URxvt.font: xft:Inconsolata:size=12:antialias=true
 !
 ! ! url hacks ------------------------------------
 ! ! mostly allows for the clicking of links in irssi
-URxvt.urlLauncher:      /usr/bin/firefox
+URxvt.url-launcher:     /usr/bin/firefox
 URxvt.underlineURLs:    true
 URxvt.urlButton:        2
+URxvt.colorUL:          #C7E4FF
 !
 ! ! copy/paste -----------------------------------
 ! ! dont use this very often, but nice to know I can.
