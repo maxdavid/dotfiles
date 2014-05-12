@@ -12,7 +12,5 @@ alias yellowfin='ssh max@dogfish.servebeer.com -p 2222'
 alias gs='git status'
 alias gp='git pull'
 
-alias spy='lsof -i -P +c 0 +M | grep -i "$1"'
-alias sax='/usr/local/sbin/epic_cuckoo.sh'
 alias please="sudo"
 
