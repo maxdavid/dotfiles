@@ -9,7 +9,6 @@ bell_msg "!! %t (%n)"
 
 # Open some windows with these names, change to your liking
 # screen -t music ncmpcpp # opens a tab called music and starts ncmpcpp
-screen -t irc
 screen -t bash
 
 # tab bar
