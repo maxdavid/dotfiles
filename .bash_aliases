@@ -8,7 +8,6 @@ alias sourdiesel='export TERM=xterm;ssh -t davmax04@ada.evergreen.edu ssh pipeco
 alias tunny='ssh max@192.241.195.88'
 alias gibson='ssh max@192.241.235.71'
 alias yellowfin='ssh max@dogfish.servebeer.com -p 2222'
-alias player='ssh player@dogfish.servebeer.com -p 22'
 
 alias tahoe='ssh maxdavid@tahoe.cs.dartmouth.edu'
 alias conch='ssh max@129.170.213.70'
@@ -16,8 +15,6 @@ alias aristotle='ssh canopus@aristotle.dartmouth.edu'
 alias aurora='ssh -t canopus@aristotle.dartmouth.edu ssh aurora@157.132.41.82'
 
 alias tunneltrac='sudo ssh -f davmax04@ada.evergreen.edu -L 80:trac.evergreen.edu:80 -N'
-alias tunnelslacr='sudo ssh -f tc_max@ada.evergreen.edu -L 80:slacr.evergreen.edu:80 -N'
-alias tunnelkace='sudo ssh -f tc_max@ada.evergreen.edu -L 80:kaceapp.evergreen.edu:80 -N'
 
 alias gs='git status'
 alias gp='git pull'
