@@ -1,3 +1,3 @@
 [submodule ".vim/bundle"]
 	path = vim/.vim/bundle
-	url = git@github.com:maxdavid/vim-bundle.git
+	url = https://github.com/maxdavid/vim-bundle.git
