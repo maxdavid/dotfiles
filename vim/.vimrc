@@ -1,10 +1,9 @@
 "" General options  -----------------------
 set nocompatible                " choose no compatibility with legacy vi
-set background=dark             " who doesn't like dark backgrounds?
 set history=1000                " default history is 20, I'll have none of that
 set tabpagemax=15               " show no more than 15 tabs
 set t_Co=256                    " allow for 256 colors
-syntax enable
+syntax on
 
 "" Keybindings  ---------------------------
 inoremap jk <Esc>
@@ -18,10 +17,8 @@ set scrolloff=3
 set showcmd                     " display incomplete commands
 
 "" Plugin settings  -----------------------
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-call pathogen#infect()          " tpope's pathogen for vim addons (https://github.com/tpope/vim-pathogen)
-call pathogen#helptags()
-filetype plugin indent on       " load file type plugins + indentation
+execute pathogen#infect()
+filetype plugin indent on          " load file type plugins + indentation
 let g:vim_markdown_folding_disabled=1  " disable auto folding in plasticboy's md syntax plugin
 
 "" Wrapping  ------------------------------
