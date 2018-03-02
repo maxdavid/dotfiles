@@ -43,6 +43,5 @@ unset color_prompt force_color_prompt
 
 export PATH
 export EDITOR=vim
-export BROWSER=firefox
 
 [[ -s "/home/max/.rvm/scripts/rvm" ]] && source "/home/max/.rvm/scripts/rvm"
